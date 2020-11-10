@@ -34,9 +34,10 @@ Query: { $and: [ { number_of_employees: {$lt:5000 }}, {"founded_year": {$lt: 200
 Limit: 10
 
 
-<!-- ### 6. All the companies that don't include the `partners` field.
+ ### 6. All the companies that don't include the `partners` field.
 
-{ partner : { $ne :  } } -->
+Query: {partners: {$exists: false}}
+
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
